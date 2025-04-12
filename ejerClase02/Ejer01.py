@@ -53,6 +53,8 @@ def leerArchivo(archivo):
         print(f"El archivo {archivo} no existe. Intentando crearlo...")
         with open(archivo, 'w') as arch:
             arch.write(f"{archivo}Creado con éxito")
+    finally:
+        arch.close
 
 def dividir(dividendo, divisor):
     comprobar(dividendo)
